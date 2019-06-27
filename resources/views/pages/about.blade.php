@@ -1,18 +1,12 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+@section('content')
+        
+    <div class="jumbotron text-center">
+        <h1>Welcome To About Page</h1>
+        <p><b>All you ned to know</b> </p>
+      </div>
+@endsection
 
-        <title>About</title>
-
-      
-    </head>
-    <body>
-        <h1>About</h1>
-        <p>This is about page</p>
    
         
-    </body>
-</html>
+    

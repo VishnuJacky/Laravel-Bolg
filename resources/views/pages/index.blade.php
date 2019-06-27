@@ -1,18 +1,21 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel App</title>
 
-      
-    </head>
-    <body>
-        <h1>Welcome to Laravel</h1>
-        <p>This is an laravel application</p>
-   
-        
-    </body>
-</html>
+@section('content')
+      <div class="jumbotron text-center">
+        <h1>Welcome To Laravel Blog!</h1>
+        <p><b>This is a blog based on laravel</b> </p>
+        <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a> 
+            <a class="btn btn-primary btn-lg" href="/posts" role="button">View Posts</a></p>
+      </div>
+      <hr>
+      <small>vishnu_jacky  | R̥ </small>
+      <small>COPYRIGHT PROTECTED</small>
+@endsection
+
+
+
+
+
+
+

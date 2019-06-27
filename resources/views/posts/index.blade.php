@@ -1,32 +1,32 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>INDEX</title>      
-    </head>
-    <body>
-    <h1>POSTS</h1>
+@section('content')
+    <h1>Posts</h1>
+    <style>
+.center {
+    text-align: left;
+    border: 5px solid white;
+}
+</style>
+    @if(count($posts) > 0)
+        @foreach($posts as $post)
+        <hr>
+            <//div class="center">
+            <div class="well">
+                <div class="row">
+                     <div class="col-md-4 col-sm-4">
+                        <img style="width:40%" src="/storage/filename/{{$post->filename}}">
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                        <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                        <SMALL>Written on {{$post->created_at}} by {{$post->user->name}}</SMALL>
+                    </div>
+                </div>
+            </div>
+        @endforeach
 
-          @if(count($posts)>0)
-           @foreach($posts as $post)
-             <div class="well">
-
-                <h2> {{$post->title}} </h2>
-                <h3> {{$post->body}} </h3>
-                 <small> Written on {{$post->created_at}} </small>
-                
-              </div>
-           @endforeach
-           
-           @else
-           <p>No posts found</p>
-
-          @endif
-  
-       
-
-    </body>
-</html>
+        
+    @else
+        <p>No posts found</p>
+    @endif
+@endsection

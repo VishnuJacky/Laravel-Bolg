@@ -1,18 +1,18 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+@section('content')
 
-        <title>Laravel App</title>
 
-      
-    </head>
-    <body>
-        <h1>Services</h1>
-        <p>Sevices Page</p>
-   
-        
-    </body>
-</html>
+      <div class="jumbotron text-center">
+        <h1>Welcome To Services Page</h1>
+        <p><b>At your service</b> </p>
+        <hr>
+        <h2>Contact:</h2>
+        <h2>Phone:94******31</h2>
+        <h2>Email:vishnu***@gmail.com</h2>
+
+
+      </div>
+
+
+
+@endsection 
